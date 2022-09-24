@@ -1,0 +1,85 @@
+
+ <!-- Header Start-->
+ <%- include('./include/header.ejs') %>
+  <!-- Header End-->
+    
+</head>
+
+<body>
+
+    <%- include('./sideBar.ejs') %>
+        <!-- Page wrapper  -->
+        <div class="page-wrapper">
+            <div class="row page-titles">
+                <div class="col-md-5 col-12 align-self-center">
+                    <h3 class="text-themecolor mb-0">Order Lists</h3>
+                    <ol class="breadcrumb mb-0 p-0 bg-transparent">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                        <li class="breadcrumb-item active">Order Lists</li>
+                    </ol>
+                </div>
+           
+            </div>
+            <div class="container-fluid">
+                <!-- basic table -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">All Client Data</h4>
+                             
+                                <div class="table-responsive">
+                                    <table id="zero_config" class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>User Name</th>
+                                                <th>Email</th>
+                                                <th>Membership ID</th>
+                                                <th>Discount</th>
+                                                <th>Phone</th>
+                                                <th>Address</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% for(let i=0;i<data.length;i++){ %>
+                                                <tr>
+                                                    <td><%=data[i].name%></td>
+                                                    <td><%=data[i].useremail%></td>
+                                                    <td><%=data[i].id%></td>
+                                                    <td><%=data[i].discount%></td>
+                                                    <td><%=data[i].phone%></td>
+                                                    <td><%=data[i].address%></td>
+                                                </tr>
+                                            <% } %>
+                                        </tbody>                       
+                                    </table>
+                                    
+                                    <ul class="pagination float-right">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <!-- JS Plugin Start-->
+ <%- include('./include/js.ejs') %>
+  <!-- JS Plugin End-->
+</body>
+
+</html>

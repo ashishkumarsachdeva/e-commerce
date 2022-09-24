@@ -1,0 +1,90 @@
+
+ <!-- Header Start-->
+ <%- include('./include/header.ejs') %>
+  <!-- Header End-->
+
+</head>
+
+<body>
+    <%- include('./sideBar.ejs') %>
+        <!-- Page wrapper  -->
+        <div class="page-wrapper">
+            <!-- Bread crumb and right sidebar toggle -->
+            <div class="row page-titles">
+                <div class="col-md-5 col-12 align-self-center">
+                    <h3 class="text-themecolor mb-0">Total Sales</h3>
+                    <ol class="breadcrumb mb-0 p-0 bg-transparent">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                        <li class="breadcrumb-item active">Total Sales</li>
+                    </ol>
+                </div>
+                <div class="col-md-7 col-12 align-self-center d-none d-md-block">
+                    <div class="d-flex mt-2 justify-content-end">
+                        <div class="d-flex mr-3 ml-2">
+                            <div class="chart-text mr-2">
+                                <h6 class="mb-0"><small>Total Earning</small></h6>
+                                <h4 class="mt-0 text-info">$<%=totalSell%>
+                                </h4>
+                            </div>
+                            <div class="spark-chart">
+                                <div id="monthchart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table product-overview text-center" id="zero_config">
+                                        <thead>
+                                            <tr>
+                                                <th>Customer Mail</th>
+                                                <th>Order ID</th>
+                                                <th>Product</th>
+                                                <th>Price</th>
+                                                <th>Date(D-M-D-Y)</th>
+                                                <th>Status</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% for(let i=0; i <data.length; i++ ) {  %>
+                                                <tr>
+                                                    <td><%=data[i].userMail%></td>
+                                                    <td>#<%=data[i].bookingID%></td>
+                                                    <td><%=data[i].serviceName%></td>
+                                                    <td><%=data[i].servicePrice%></td>
+                                                    <td><%=data[i].day%></td> 
+                                                    <td> <span class="label label-success font-weight-100"><%=data[i].paymentType%></span> </td>
+                                                  
+                                                </tr>
+                                            <% } %>
+                                           
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+
+
+ <!-- JS Plugin Start-->
+ <%- include('./include/js.ejs') %>
+  <!-- JS Plugin End-->
+</body>
+
+</html>

@@ -1,0 +1,1412 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+
+
+body, h1, h2, h3, h4, h5, h6,p,a,span,  input[type="text"], input[type="password"], input[type="email"],
+textarea, select, input[type="button"]{ 
+  font-family: 'Playfair Display', serif;
+}
+/* New page design */
+.header-navigation {
+    position: relative;
+}
+
+.sectio {
+    position: relative;
+}
+
+.video-container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    overflow: hidden;
+}
+
+.pera {
+    position: absolute;
+}
+
+video {
+    width: 100%;
+    max-height: 100%;
+}
+
+.video-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.video-section video {
+    position: relative;
+    z-index: 0;
+}
+.loginmsg{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+  width: 80%;
+}
+.loginSet a{
+  text-decoration: none;
+}
+.loginSet a:hover{
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  /* border: 1px solid #f91942; */
+  background-color: #FC4B6C;
+
+  border-radius: 25px;
+}
+.loginBtn{
+  margin-right: 30px;
+  color: #222;
+  padding: 5px 10px;
+  border-radius: 25px;
+}
+.businessBtn{
+  color: #fff;
+  padding: 5px 10px;
+  border: 1px solid #f91942;
+  background-color: #FC4B6C;
+  border-radius: 25px;
+}
+.overlay {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1;
+    width: 80%;
+}
+.overlay .search-option{
+  border-radius: 25px;
+  background-color: whitesmoke;
+  padding: 10px 20px;
+}
+.overlay .search-option .categorysearch{
+ font-size: 18px;
+ color: #222;
+}
+.overlay .search-option .locationsearch{
+  font-size: 18px;
+  color: #222;
+ }
+.product-info .shop-info .rating{
+  color: #ffc600;
+}
+.cearch-categpry ul{
+  margin-left: 50%;
+   transform: translate(-50%, 0); 
+}
+.cearch-categpry ul li{
+  float: left;
+  padding: 2px 3px;
+  margin: 2px 3px;
+}
+.cearch-categpry ul li a{
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 2px 15px;
+  border-radius: 25px;
+  color: #222;
+}
+.overlay input{
+  border: hidden;
+  background-color: whitesmoke;
+  font-size: 22px;
+}
+.header-navigation header nav .form-inline .btn-group a{
+  text-decoration: none;
+  color: #222;
+}
+.header-navigation header nav .form-inline a{
+  text-decoration: none;
+  cursor: pointer;
+}
+.header-navigation header nav .form-inline .btn-group a img{
+  border-radius: 50%;
+}
+.categorysearch {
+    width: 40%;
+}
+
+.locationsearch {
+    width: 40%;
+}
+
+.searchBtn {
+    width: 10%;
+    border-radius: 25px;
+    background-color: #f91942;
+    margin-left: 80px;
+}
+
+.footer-links li {
+    margin: 10px 0px;
+}
+
+.footer-links li i {
+    color: #707070;
+}
+
+#footer .footer-links a {
+    text-decoration: none;
+    color: #707070;
+}
+
+.text-widget {
+    color: #707070;
+}
+
+.footer-links a:hover {
+    text-decoration: none;
+    color: #707070;
+    padding-left: 2px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#footer .social-icons ul li {
+    float: left;
+    margin: 10px 20px;
+    background-color: #f91942;
+    border-radius: 50%;
+    padding: 5px 10px;
+    color: whitesmoke;
+}
+
+.social-icons .facebook {
+    color: whitesmoke;
+}
+
+.social-icons .twitter {
+    color: whitesmoke;
+}
+
+.social-icons .gplus {
+    color: whitesmoke;
+}
+
+#footer .copyrights a {
+    text-decoration: none;
+    color: #f91942;
+}
+
+.header-navigation header nav .navbar-collapse ul li {
+    color: #222;
+    padding: 2px 10px;
+}
+
+.header-navigation header nav .navbar-collapse ul li a {
+    color: #222;
+    padding: 2px 10px;
+}
+
+.header-navigation header nav .navbar-collapse ul li a:hover {
+    color: white;
+    background-color: #f91942;
+    border-radius: 25px;
+
+}
+.product-list .item a{
+    text-decoration: none;
+}
+
+
+
+.star {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-star:before,
+.rating[data-rating="5"] .star:before,
+.rating[data-rating="4"] .star:before,
+.rating[data-rating="3"] .star:nth-child(1):before,
+.rating[data-rating="3"] .star:nth-child(2):before,
+.rating[data-rating="3"] .star:nth-child(3):before,
+.rating[data-rating="2"] .star:nth-child(1):before,
+.rating[data-rating="2"] .star:nth-child(2):before,
+.rating[data-rating="1"] .star:first-child:before {
+    content: "";
+}
+#loader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: whitesmoke url('/assets/images/loader.gif') no-repeat center;
+  z-index: 100;
+}
+.fa-star-o:before,
+.rating[data-rating="4"] .star:last-child:before,
+.star:before {
+    content: "";
+}
+
+.fa-star-half:before {
+    content: "";
+}
+/* owl carosel */
+.owl-carousel .owl-nav [class*=owl-] {
+    transition: all 0.3s ease;
+}
+
+.owl-carousel .owl-nav [class*=owl-].disabled:hover {
+    background-color: #D6D6D6;
+}
+
+.owl-carousel {
+    position: relative;
+}
+.item .shadow-effect img{
+height: 350px;
+}
+
+
+.product-info{
+    margin-top: 100px;
+}
+.shopname{
+    border: 2px solid red;
+    padding: 5px 10px;
+    border-radius: 25px;
+    font-size: 20px;
+}
+.service-list{
+    padding: 5px 10px;
+}
+.service-list .media{
+ border: 1px dotted #262C3D;
+ padding: 5px 10px;
+ margin: 5px 0px;
+}
+.reviewTextarea{
+  display: block;
+  width: 80%;
+  height: 200px;
+}
+.progress-result{
+    width: 100%;
+    /* padding: 15px; */
+    float: left;
+    padding: 2px 4px;
+}
+.progress-result .progress-number{
+    width: 20%;
+    float: left;
+}
+.progress-result .pro{
+    width: 70%;
+    float: left;
+   padding: 0px 3px;
+}
+.progress-result .pro .progress{
+    margin-top: 11px;
+    height: 5px;
+}
+.progress-result .progress-value{
+    width: 10%;
+    float: left;
+}
+.review-show .review-user{
+float: left;
+}
+.review-show .review-user img{
+  border-radius: 50%;
+  }
+.package-show{
+    border: 5px dotted #222;
+    padding: 20px 30px;
+}
+.confirm-sign i{
+    margin-top: 30px;
+    font-size: 255px;
+}
+.confirm a{
+    text-decoration: none;
+    border-radius: 25px;
+    background-color: #f07070;
+    padding: 5px 10px;
+    color: whitesmoke;
+}
+.payment-slip{
+    margin-top: 250px;
+}
+
+/* side nav bar */
+
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+  
+  /* header {
+    height: 60px;
+    background: #262C3D;
+    color: #fff;
+  } */
+
+  
+.app .body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: whitesmoke;
+    height: 100vh;
+    overflow: hidden;
+}
+ 
+  .app header .nav-trigger, .app header .right-links {
+    float: right;
+    line-height: 60px;
+    padding: 0 2.4rem;
+  }
+  .content {
+    flex: 1;
+    overflow-y: scroll;
+    padding: 0.5rem 2rem;
+  }
+  
+  .side-nav {
+    background: #2a2a2a;
+    height: 100vh;
+    display: none;
+    color: #fff;
+    flex: 0 0 350px;
+  }
+
+  .side-nav.is-open {
+    display: block;
+  }
+  .side-nav .event {
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+    background: #313748;
+    padding: 0 1.8rem;
+  }
+  .side-nav ul {
+    list-style-type: none;
+    padding: 2rem 0;
+    margin: 0;
+  }
+  .side-nav ul li {
+    position: relative;
+    padding: 10px 15px;
+    color: rgba(255, 255, 255, 0.65);
+  }
+  .side-nav ul li a{
+text-decoration: none;
+    color: rgba(255, 255, 255, 0.65);
+  }
+  .side-nav ul li.active {
+    color: #fff;
+    background-color: rgba(255,255,255,0.05);
+  }
+  .side-nav ul li.active::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 10%;
+    height: 80%;
+    width: 3px;
+    
+  }
+  .side-nav ul li i {
+    display: inline-block;
+    width: 24px;
+    text-align: center;
+    padding-right: 1rem;
+  }
+  .side-nav li.label {
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.15rem;
+    font-size: 1.2rem;
+  }
+
+  
+  .visible-M {
+    display: none;
+  }
+ 
+  .content{
+    margin-top: 66px;
+  }
+  .payment{
+    margin-top: 10px;
+    border: 2px dashed black;
+    padding: 10px 20px;
+    background-color: #fff;
+  }
+  .header-navigation header nav .resbtn{
+    background-color: #222;
+  }
+  .page-content{
+    margin-top: 66px;
+  }
+  .opening-time{
+    margin-top: 100px;
+background-color: whitesmoke;
+padding: 10px;
+  }
+  .contact-info{
+    margin-top: 60px;
+    background-color: whitesmoke;
+    padding: 10px;
+  }
+  .contact-info a{
+    display: block;
+    text-decoration: none;
+  }
+  .policy{
+    margin-top: 50px;
+    background-color: whitesmoke;
+    padding: 10px;
+  }
+  .policy a{
+    margin-top: 10px;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .policy .report{
+    text-align: center;
+    border: 1px solid #f91942;
+    padding: 5px;
+    color: #222;
+  }
+  .policy .report:hover{
+    text-align: center;
+    background-color: #f91942;
+    padding: 5px;
+    color: #fff;
+    text-decoration: none;
+  }
+  .policy .health{
+    text-align: center;
+    border: 1px solid red;
+    padding: 5px;
+    color: #222;
+  }
+  .policy .health:hover{
+    text-align: center;
+    background-color: #f91942;
+    padding: 5px;
+    color: #fff;
+    text-decoration: none;
+  }
+  .service-nav-list{
+    margin: 25px 0px;
+  }
+  .service-nav-list p{
+    font-size: 22px;
+  }
+.overview-list{
+  margin: 25px 0px;
+  background-color: whitesmoke;
+  padding: 15px;
+}
+.review-rating{
+  margin: 25px 0px;
+  background-color: whitesmoke;
+  padding: 15px;
+}
+.review-rating .rating{
+  color: #ffc600;
+}
+.review-rating .fa-star{
+  color: #ffc600;
+}
+.review-show{
+  margin: 25px 0px;
+  background-color: whitesmoke;
+  padding: 15px;
+}
+.review-show .rating{
+  color: #ffc600;
+}
+.review-show .media .media-body .reviewPicShow{
+  width: 100%;
+  height: 200px;
+}
+.packageShow{
+  padding: 10px 5px;
+  margin-bottom: 10px;
+  border: 5px dotted #444;
+}
+.add-review{
+  margin: 25px 0px;
+  padding: 15px;
+}
+.add-review .reviewPic{
+  margin: 25px 0px;
+}
+.add-review .reviewSubmit{
+  margin: 25px 0px;
+}
+.product-list .item img{
+  width: 100%;
+  height: 220px;
+}
+.product-list .item .card-body .rating{
+color: #ffc600;
+}
+.listing-item-container .listing-item img{
+  width: 100%;
+}
+.panel-dropdown .toggle-wrap{
+  border: none;
+}
+.toggle-wrap{
+  margin-top: 50px;
+  background-color: whitesmoke;
+  padding: 10px 0px;
+  border: 1px solid #222;
+}
+.toggle-wrap .trigger a{
+  text-decoration: none;
+  color: #222;
+  font-size: 22px;
+}
+.invoiceBtn{
+  padding: 5px 10px;
+}
+.appointment .media{
+  background-color: #fff;
+  margin-top: 15px;
+  
+}
+.appointment .media img{
+ width: 100px;
+ height: 100px;
+ border-radius: 50%;
+ margin-right: 15px;
+}
+
+.content .user-half-info{
+  background-color: #fff;
+  padding: 10px 15px;
+}
+.content .user-pass{
+  background-color: #fff;
+  padding: 10px 15px;
+}
+.buttons-to-right{
+  margin-top: 20px;
+}
+.buttons-to-right a{
+  text-decoration: none;
+}
+.content .review .media{
+  background-color: #fff;
+  padding: 10px 15px;
+}
+.content .review .media img{
+  border-radius: 50%;
+}
+.content .review .media .rating{
+  color: #ffc600;
+}
+.page-content .searchresult{
+background-color: whitesmoke;
+border: 2px solid #222;
+margin-top: 25px;
+padding: 20px 25px;
+}
+
+.page-content .searchresult a{
+  text-decoration: none;
+  color: #222;
+}
+
+.page-content .searchresult a .media{
+  margin-top: 25px;
+}
+.page-content .searchresult a .rating{
+  color: #ffc600;
+}
+
+/* .appointment .media .media-body{
+  margin-left: 25px;
+ } */
+
+/* old page */
+
+/* ---------------------------------- */
+/* Date Range Picker
+------------------------------------- */
+input#date-picker {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-weight: 600;
+  height: auto;
+  padding: 10px 16px;
+  line-height: 30px;
+  margin: 0 0 15px 0;
+  position: relative;
+  background-color: #fff;
+  text-align: left;
+  color: #888;
+  transition: color 0.3s !important;
+}
+
+input#date-picker:hover {
+  color: #444;
+}
+
+.daterangepicker {
+position: absolute;
+color: inherit;
+background-color: #fff;
+border-radius: 6px;
+box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.12);
+width: 278px;
+max-width: none;
+padding: 0;
+margin-top: 14px;
+top: 100px;
+left: 20px;
+z-index: 3001;
+display: none;
+font-size: 15px;
+line-height: 1em;
+transition: opacity 0.4s, transform 0.4s, visibility 0.4s;
+opacity: 0;
+transform: translateY(-15px);
+}
+
+/* Bordered Style */
+.daterangepicker.bordered-style {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.08);
+  margin-top: 4px;
+  transform: none !important;
+}
+
+.daterangepicker.bordered-style.opensleft:after {
+  display: none;
+}
+
+.daterangepicker.calendar-animated {
+opacity: 0;
+transform: translateY(-15px);
+}
+
+.daterangepicker.calendar-hidden {
+display: block !important;
+opacity: 0;
+pointer-events: none;
+visibility: hidden;
+transform: translateY(-15px);
+}
+
+.daterangepicker.calendar-visible {
+opacity: 1;
+pointer-events: all;
+visibility: visible;
+transform: translateY(0);
+}
+
+.daterangepicker:before, .daterangepicker:after {
+position: absolute;
+display: inline-block;
+border-bottom-color: rgba(0, 0, 0, 0.2);
+content: '';
+}
+
+.daterangepicker:after {
+top: -7px;
+border-right: 7px solid transparent;
+border-bottom: 7px solid #ccc;
+border-left: 7px solid transparent;
+}
+
+.daterangepicker.opensleft:before {
+right: 9px;
+}
+
+.daterangepicker.opensleft:after {
+right: 50px;
+}
+
+.daterangepicker.openscenter:before {
+left: 0;
+right: 0;
+width: 0;
+margin-left: auto;
+margin-right: auto;
+}
+
+.daterangepicker.openscenter:after {
+left: 0;
+right: 0;
+width: 0;
+margin-left: auto;
+margin-right: auto;
+}
+
+.daterangepicker.opensright:before {
+left: 9px;
+}
+
+.daterangepicker.opensright:after {
+left: 50px;
+}
+
+@media (min-width: 1366px) {
+.daterangepicker.opensleft:after { right: 154px; }
+.daterangepicker.single:before {
+  content: "";
+  height: 10px;
+  position: absolute;
+  width: 100%;
+  top: -3px;
+  background-color: #fff;
+  left: 0;
+  transition: all 0.3s;
+  border-bottom: 1px solid #eee;
+}
+.daterangepicker.single {
+width: 309px;
+border-radius: 0 0 6px 6px;
+margin-top: -7px;
+transform: translateY(0) !important;
+}
+.daterangepicker.single .drp-calendar {
+width: 100%;
+zoom: 1.08;
+margin: 3px 0 3px 5px;
+}
+.daterangepicker.single.opensleft:after {
+right: 50%;
+margin-right: -4px;
+display: none;
+}
+}
+
+.daterangepicker.drop-up {
+margin-top: -7px;
+}
+
+.daterangepicker.drop-up:before {
+top: initial;
+bottom: -7px;
+border-bottom: initial;
+border-top: 7px solid #ccc;
+}
+
+.daterangepicker.drop-up:after {
+top: initial;
+bottom: -6px;
+border-bottom: initial;
+border-top: 6px solid #fff;
+}
+
+.daterangepicker.single .daterangepicker .ranges, .daterangepicker.single .drp-calendar {
+float: none;
+}
+
+.daterangepicker.single .drp-selected {
+display: none;
+}
+
+.daterangepicker.show-calendar .drp-calendar {
+display: block;
+}
+
+.daterangepicker.show-calendar .drp-buttons {
+display: block;
+}
+
+.daterangepicker.auto-apply .drp-buttons {
+display: none;
+}
+
+.daterangepicker .drp-calendar {
+display: none;
+max-width: 270px;
+}
+
+.daterangepicker .drp-calendar.left {
+padding: 12px 0 12px 12px;
+}
+
+.daterangepicker .drp-calendar.right {
+padding: 12px;
+}
+
+.daterangepicker .drp-calendar.single .calendar-table {
+border: none;
+}
+
+.daterangepicker .calendar-table .next span, 
+.daterangepicker .calendar-table .prev span {
+color: #fff;
+border: solid #aaa;
+border-width: 0 2px 2px 0;
+border-radius: 0;
+display: inline-block;
+padding: 3px;
+margin-left: 3px;
+}
+
+.daterangepicker th.available.next:hover,
+.daterangepicker th.available.prev:hover { background: #f0f0f0; }
+
+.daterangepicker .calendar-table .next span { margin-right: 6px; }
+
+.daterangepicker .calendar-table .next span {
+transform: rotate(-45deg);
+-webkit-transform: rotate(-45deg);
+}
+
+.daterangepicker .calendar-table .prev span {
+transform: rotate(135deg);
+-webkit-transform: rotate(135deg);
+}
+
+.daterangepicker .calendar-table th, 
+.daterangepicker .calendar-table td {
+white-space: nowrap;
+text-align: center;
+vertical-align: middle;
+min-width: 32px;
+width: 32px;
+height: 24px;
+line-height: 24px;
+font-size: 14px;
+border-radius: 4px;
+border: 1px solid transparent;
+white-space: nowrap;
+cursor: pointer;
+}
+
+.daterangepicker .calendar-table td { transition: 0.3s; }
+
+
+.daterangepicker .calendar-table td.available.in-range:hover {
+border-radius: 0 3px 3px 0;
+}
+
+.daterangepicker .calendar-table td.available.start-date:hover {
+border-radius: 3px 0 0 3px;
+}
+
+.daterangepicker .calendar-table {
+border: 1px solid #fff;
+border-radius: 4px;
+background-color: #fff;
+}
+
+.daterangepicker .calendar-table table {
+width: 100%;
+margin: 0;
+border-spacing: 0;
+border-collapse: collapse;
+}
+
+.daterangepicker td.available:hover, .daterangepicker th.available:hover {
+background-color: #66676b;
+border-color: transparent;
+color: #fff;
+}
+
+.daterangepicker td.week, .daterangepicker th.week {
+font-size: 80%;
+color: #ccc;
+}
+
+.daterangepicker td.off, .daterangepicker td.off.in-range, .daterangepicker td.off.start-date, .daterangepicker td.off.end-date {
+background-color: #fff;
+border-color: transparent;
+color: #999;
+}
+
+.daterangepicker td.in-range {
+background-color: rgba(102, 103, 107, 0.08);
+border-color: transparent;
+color: #66676b;
+border-radius: 0;
+}
+
+.daterangepicker td.start-date {
+border-radius: 4px 0 0 4px;
+}
+
+.daterangepicker td.end-date {
+border-radius: 0 4px 4px 0;
+}
+
+.daterangepicker td.start-date.end-date {
+border-radius: 4px;
+}
+
+.daterangepicker td.active, .daterangepicker td.active:hover {
+background-color: #66676b;
+border-color: transparent;
+color: #fff;
+}
+
+.daterangepicker th.month {
+width: auto;
+}
+
+.daterangepicker td.disabled, .daterangepicker option.disabled {
+color: #999;
+cursor: not-allowed;
+text-decoration: line-through;
+background: #f4f4f4;
+border: 1px solid #fff;
+}
+
+.daterangepicker select.monthselect, .daterangepicker select.yearselect {
+font-size: 12px;
+padding: 1px;
+height: auto;
+margin: 0;
+cursor: default;
+}
+
+.daterangepicker td.end-date.in-range.available { color: #fff; }
+
+.daterangepicker select.monthselect {
+margin-right: 2%;
+width: 56%;
+}
+
+.daterangepicker select.yearselect {
+width: 40%;
+}
+
+.daterangepicker select.hourselect, .daterangepicker select.minuteselect, .daterangepicker select.secondselect, .daterangepicker select.ampmselect {
+width: 50px;
+margin: 0 auto;
+background: #eee;
+border: 1px solid #eee;
+padding: 2px;
+outline: 0;
+font-size: 12px;
+}
+
+.daterangepicker .calendar-time {
+text-align: center;
+margin: 4px auto 0 auto;
+line-height: 30px;
+position: relative;
+}
+
+.daterangepicker .calendar-time select.disabled {
+color: #ccc;
+cursor: not-allowed;
+}
+
+.daterangepicker .drp-buttons {
+clear: both;
+text-align: right;
+padding: 14px;
+min-height: 63px;
+display: block;
+border-top: 1px solid #eaeaea;
+display: none;
+line-height: 12px;
+vertical-align: middle;
+}
+
+.daterangepicker .drp-selected {
+display: inline-block;
+font-size: 14px;
+padding-right: 8px;
+}
+
+.daterangepicker .drp-buttons button.applyBtn,
+.daterangepicker .drp-buttons button.cancelBtn {
+background: none;
+padding: 6px 14px;
+display: inline-block;
+outline: none;
+line-height: 20px;
+border: none;
+font-weight: 600;
+margin: 0;
+font-size: 14px;
+border-radius: 50px;
+background-color: #66676b;
+color: #fff;
+transition: all 0.3s;
+margin: 0 3px;
+}
+
+.daterangepicker .drp-buttons button.cancelBtn {
+background-color: #f4f4f4;
+color: #888;
+}
+.daterangepicker .drp-buttons button.cancelBtn:hover {
+background-color: #f0f0f0;
+color: #666;
+}
+
+.daterangepicker .drp-buttons button.applyBtn {
+background-color: #66676b;
+}
+
+.daterangepicker .drp-buttons button.applyBtn:hover {
+opacity: 0.95;
+}
+
+.daterangepicker.show-ranges .drp-calendar.left {
+border-left: 1px solid #ddd;
+}
+
+.daterangepicker .ranges {
+float: none;
+text-align: left;
+margin: 0;
+}
+
+.daterangepicker.show-calendar .ranges {
+margin-top: 8px;
+}
+
+.daterangepicker .ranges ul {
+list-style: none;
+margin: 0 auto;
+padding: 0;
+width: 100%;
+}
+
+/* Booking Widget
+------------------------------------- */
+.booking-widget { z-index: 100; }
+
+.booking-widget .panel-dropdown .panel-dropdown-content {
+    border: none;
+	overflow: visible;
+	padding: 20px;
+    box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+.booking-widget .panel-dropdown { width: 100%; }
+
+.booking-widget .panel-dropdown .panel-dropdown-content:before {
+	content: "";
+	height: 10px;
+	position: absolute;
+	width: 100%;
+	top: -3px;
+	background-color: #fff;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s;
+	border-bottom: 1px solid #eee;
+}
+
+.booking-widget .panel-dropdown.active .panel-dropdown-content:before {
+	opacity: 1;
+	visibility: visible;
+}
+
+.booking-widget .panel-dropdown a {
+	border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: 600;
+    height: auto;
+    padding: 10px 16px;
+    line-height: 30px;
+    margin: 0 0 15px 0;
+    position: relative;
+    background-color: #fff;
+    text-align: left;
+    color: #888;
+    display: block;
+    width: 100%;
+
+    transition: color 0.3s;
+}
+
+.booking-widget .panel-dropdown a:hover {
+	color: #444;
+}
+
+.booking-widget .panel-dropdown a:after {
+    font-size: 20px;
+    color: #c0c0c0;
+    margin-left: 0;
+    position: absolute;
+    right: 20px;
+}
+
+/* ---------------------------------- */
+/* Time Slots Dropdown
+------------------------------------- */
+.booking-widget .panel-dropdown .panel-dropdown-content.padding-reset { padding: 0; }
+.panel-dropdown-scrollable {
+    max-height: 273px;
+    overflow: auto;
+    padding: 0 10px;
+    margin: 22px 6px 16px 6px;
+}
+/* ---------------------------------- */
+/* Panel Dropdown
+------------------------------------- */
+.panel-dropdown {
+	position: relative;
+	display: inline-block
+}
+
+.panel-dropdown a {
+	color: #666;
+	font-weight: 600;
+	font-size: 15px;
+	border-radius: 50px;
+	padding: 3px 14px;
+	transition: all 0.3s;
+	display: inline-block;
+}
+
+.panel-dropdown.active a,
+.panel-dropdown a:hover {
+	background: #f3f3f3;
+}
+
+.panel-dropdown a:after {
+	content: "\f107";
+	font-family: "FontAwesome";
+	font-size: 16px;
+	color: #66676b;
+	font-weight: 500;
+	padding-left: 0;
+	transition: all 0.3s;
+	margin-left: 6px;
+	display: inline-block;
+}
+
+.panel-dropdown.active a:after { transform: rotate(180deg); }
+
+
+.panel-dropdown .panel-dropdown-content {
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s;
+	position: absolute;
+	top: 44px;
+	left: 0px;
+	z-index: 110;
+	background: #fff;
+	border: 1px solid rgba(0,0,0,0.18);
+	border-radius: 4px;
+	box-shadow: 0 12px 35px 2px rgba(0, 0, 0, 0.12);
+	padding: 20px 24px;
+	overflow-y: auto;
+	white-space: normal;
+	width: 460px;
+}
+
+.panel-dropdown.wide .panel-dropdown-content { width: 570px; }
+
+.panel-dropdown.active .panel-dropdown-content {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* Time Slot Labels */
+.time-slot {
+	display: block;
+}
+
+.time-slot label {
+  border-radius: 3px;
+  border: none;
+  background-color: #f6f6f6;
+  width: 100%;
+}
+
+/* hide input */
+.time-slot input:empty {
+	display: none;
+}
+
+/* style label */
+.time-slot label i {
+	position: relative;
+	font-size: 18px;
+	top: 2px;
+	margin-right: 2px;
+}
+
+.time-slot input:empty ~ label {
+	position: relative;
+	float: left;
+	padding: 12px 10px;
+	text-align: center;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border-radius: 4px;
+	color: #777;
+	transition: 0.3s;
+	overflow: hidden;
+	font-size: 15px;
+}
+
+.time-slot:last-child label {
+	margin-bottom: 0;
+}
+
+.time-slot input ~ label:hover {
+	color: #66676b;
+	background-color: rgba(102, 103, 107, 0.08);
+}
+
+.time-slot input:checked ~ label:hover {
+	color: #fff;
+}
+.time-slot input:checked ~ label {
+	color: #fff;
+	background-color: #66676b;
+}
+
+.time-slot input:checked ~ label span {
+	color: #fff;
+	opacity: 0.8;
+}
+
+.time-slotinput:empty ~ label:after,
+.time-slot input:empty ~ label:before {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	border-radius: 4px;
+	background: transparent;
+	z-index: 100;
+	opacity: 0;
+}
+
+.time-slot label span,
+.time-slot label strong {
+	font-weight: 600;
+	display: block;
+	padding: 0;
+	margin: 0;
+	line-height: 19px;
+
+}
+
+.time-slot label span{
+	font-weight: 500;
+	opacity: 0.5;
+	transition: 0.3s;
+}
+
+.time-slot label:hover span {
+	color: #66676b;
+	opacity: 0.6;
+}
+.sub-rating-stars{
+  display: block;
+}
+.uploadreviewpic{
+  display: block;
+}
+.sub-rating-stars .leave-rating {
+	height: 24px;
+	float: left;
+}
+
+.sub-rating-stars .leave-rating:hover input[type="radio"]:checked ~ label { color: #dadada; }
+
+.sub-rating-stars .leave-rating input[type="radio"] { display: none; }
+
+.sub-rating-stars .leave-rating input[type="radio"]:checked ~ label { color: #ffc600; }
+
+.sub-rating-stars .leave-rating label {
+	font-size: 24px;
+	float: right;
+	letter-spacing: 4px;
+	color: #dadada;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.sub-rating-stars.leave-rating label:hover,
+.sub-rating-stars .leave-rating label:hover ~ label {
+	color: #ffc600 !important;
+}
+
+.sub-rating-stars .leave-rating-title {
+	display: block;
+	margin: 35px 0 7px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .app header {
+    height: 75px;
+    background: #262C3D;
+    color: #fff;
+  }
+}
+@media (max-width: 576px) {
+  .content{
+    margin-top: 2px;
+  }
+  .appointment .media img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 2px;
+    margin-top: 50%;
+   }
+
+}
+@media only screen and (min-width: 768px) {
+  .app header .nav-trigger, .app header .right-links {
+    line-height: 75px;
+  }
+  .app .body {
+    flex-direction: row;
+    height: 100vh;
+  }
+  .side-nav {
+    display: block;
+    flex: 0 0 225px;
+    height: 100vh;
+  }
+  .hidden-M {
+    display: none;
+  }
+  .visible-M {
+    display: block;
+  }
+}

@@ -1,0 +1,51 @@
+
+ <!-- Header Start-->
+ <%- include('./include/header.ejs') %>
+  <!-- Header End-->
+
+</head>
+
+<body>
+
+    <%- include('./sideBar.ejs') %>
+    <!-- Page wrapper  -->  
+    <div class="page-wrapper">
+        <div class="heath-information">
+            <div class="container">
+                <h1 class="text-center">Review and Rating from User</h1>
+                <div class="row">
+                   <div class="col-md-12">
+                    
+                        <table class="table table-bordered text-center">
+                            <thead>
+                                <tr>
+                                    <th>User Name</th>
+                                    <th>Report</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(i=0;i<data.length;i++){  %>
+                                <tr>
+                                    <td><%=data[i].user%></td>
+                                    <td><%=data[i].reports%></td>
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+              
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    </div>
+
+ <!-- JS Plugin Start-->
+ <%- include('./include/js.ejs') %>
+  <!-- JS Plugin End-->
+</body>
+
+</html>

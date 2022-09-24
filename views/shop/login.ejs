@@ -1,0 +1,94 @@
+
+ <!-- Header Start-->
+ <%- include('./include/header.ejs') %>
+  <!-- Header End-->
+
+</head>
+
+<body>
+
+    <div class="auth-wrapper d-flex no-block justify-content-center align-items-center" style="background:url(../assets/images/background/login-register.jpg) no-repeat center center; background-size: cover;">
+        <div class="auth-box p-4 bg-white rounded">
+            <div id="loginform">
+                <div class="logo">
+                    <h3 class="box-title mb-3">Sign In</h3>
+                </div>
+               
+                <% if(locals.err){ %>
+					<div class="alert alert-danger alert-dismissible fade show" role="alert">
+						<%=locals.err%>
+					</div>
+					<% } %>
+					<% if(locals.success){ %>
+					<div class="alert alert-success alert-dismissible fade show" role="alert">
+						<%=locals.success%>
+					</div>
+					<% } %>
+                <form id="login-form" class="form" action="/shop/dashboard" method="post">
+                <div class="row">
+                    <div class="col-12">
+                        <form class="form-horizontal mt-3 form-material" id="loginform" action="index.html">
+                            <div class="form-group mb-3">
+                                <div class="">
+                                    <input class="form-control" name="username" id="username" type="text" required="" placeholder="Username"> </div>
+                            </div>
+                            <div class="form-group mb-4">
+                                <div class="">
+                                    <input class="form-control" name="password" id="password" type="password" required="" placeholder="Password"> </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="d-flex">
+                                    <div class="checkbox checkbox-info pt-0">
+                                        <input id="checkbox-signup" type="checkbox" class="material-inputs chk-col-indigo">
+                                        <label id="remember-me" name="remember-me" for="checkbox-signup"> Remember me </label>
+                                    </div> 
+                                    <div class="ml-auto">
+                                        <a href="/shop/createaccount" id="to-recover" class="text-muted float-right"><i class="fa fa-lock mr-1"></i>Have an Account?</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group text-center mt-4">
+                                <div class="col-xs-12">
+                                    <button name="submit" class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Log In</button>
+                                </div>
+                            </div>
+                      
+                        </form>
+                    </div>
+                </div>
+                </form>
+            </div>
+            <div id="recoverform">
+                <div class="logo">
+                    <h3 class="font-weight-medium mb-3">Recover Password</h3>
+                    <span class="text-muted">Enter your Email and instructions will be sent to you!</span>
+                </div>
+                <div class="row mt-3 form-material">
+                    <!-- Form -->
+                    <form class="col-12" action="index.html">
+                        <!-- email -->
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <input class="form-control" type="email" required="" placeholder="Username">
+                            </div>
+                        </div>
+                        <!-- pwd -->
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <button class="btn btn-block btn-lg btn-primary text-uppercase" type="submit" name="action">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <!-- calender js -->
+
+</body>
+
+</html>

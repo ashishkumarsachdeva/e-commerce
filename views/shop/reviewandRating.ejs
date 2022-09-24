@@ -1,0 +1,76 @@
+
+ <!-- Header Start-->
+ <%- include('./include/header.ejs') %>
+  <!-- Header End-->
+
+    <style>
+        .reviewBox {
+            border: 2px solid rgb(15, 14, 14);
+            padding: 10px;
+            box-shadow: 0px 4px 2px 1px black;
+        }
+
+        .reviewBox ul li {
+            float: left;
+            list-style: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <%- include('./sideBar.ejs') %>
+    <!-- Page wrapper  -->
+    <div class="page-wrapper">
+        <div class="heath-information">
+            <div class="container">
+                <h1 class="text-center">Review Rating</h1>
+                <div class="row">
+                    <% for(let i=0; i< data.length; i++ ) { %>
+
+                    <div class="col-md-6">
+                        <div class="reviewBox">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4><img class="reviewDp" src="<%=data[i].reviewrDP%>" alt="dp">
+                                        <span><%=data[i].reviewrName%></span></h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul>
+                                        <% for(let j=0 ;j < data[i].rating ; j++ ) { %>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <% } %>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <img class="reviewImg" src="<%=data[i].img%>" alt="">
+                                </div>
+                                <div class="col-md-12">
+                                    <p class="mt-1"><%=data[i].review%> </p>
+                                </div>
+                            </div>
+                            <div>
+                                    <span><%=data[i].date%></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <!-- End Page wrapper  -->
+    </div>
+ <!-- JS Plugin Start-->
+ <%- include('./include/js.ejs') %>
+  <!-- JS Plugin End-->
+
+</body>
+
+</html>

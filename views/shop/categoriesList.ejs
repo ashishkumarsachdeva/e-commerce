@@ -1,0 +1,58 @@
+
+ <!-- Header Start-->
+ <%- include('./include/header.ejs') %>
+
+</head>
+
+<body>
+
+    <%- include('./sideBar.ejs') %>
+
+    <div class="page-wrapper">
+        <div class="heath-information">
+            <div class="container">
+                <h1 class="text-center">Category of your Business</h1>
+                
+                    <form action="/shop/categorieslist" method="post">
+                        <div class="row"> 
+                        <div class="col-sm-12 col-lg-6 col-md-6">
+                            <h3 class="text-center">Service List</h3>
+                            <% for(i=0;i<data.length;i++){ %>
+                            <div class="form-group">
+                                <div class="form-check form-control p-2 form-check-inline">
+                                    <input class="form-check-input material-inputs" type="checkbox"
+                                        id="<%=data[i].name%>" name="cat" value="<%=data[i].name%>" checked>
+                                    <label class="form-check-label" for="<%=data[i].name%>"><%=data[i].name%></label>
+                                </div>
+                            </div>
+                            <% } %>
+                            <div id="addNew"></div>
+                        </div>
+                        <div class="col-sm-12 col-lg-6 col-md-6">
+                            <h3>Selected service list</h3>
+                            <h4 class="text-danger" id="show"></h4>
+                            <input type="text" name="newVal" placeholder="Add New" id="newVal">
+                            <p class="btn btn-info" onclick="addNew()">Addnew</p>
+                           <div class="text-center">
+                            <button type="submit" class="btn btn-warning text-center center-block mt-5">Confirm</button>
+                           </div>
+                        </div>
+                    </div>
+                    </form>
+                
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    </div>
+
+
+ <!-- JS Plugin Start-->
+ <%- include('./include/js.ejs') %>
+  <!-- JS Plugin End-->
+   <script src="/js/shop/categoriesList.js"></script> 
+</body>
+
+</html>
